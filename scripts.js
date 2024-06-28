@@ -1,29 +1,23 @@
-// Exemple de données de camps (remplacer par les données réelles de la base de données)
-const camps = [
-    {
-        photo: 'https://example.com/photo1.jpg',
-        nom: 'Camp 1',
-        description: 'Description du camp 1...',
-        lien_inscription: 'https://example.com/inscription1',
-        lieu: 'Paris',
-        prix: 200,
-        tranche_age: '12-15',
-        type: 'sport',
-        dates: '01/07/2024 - 15/07/2024'
-    },
-    {
-        photo: 'https://example.com/photo2.jpg',
-        nom: 'Camp 2',
-        description: 'Description du camp 2...',
-        lien_inscription: 'https://example.com/inscription2',
-        lieu: 'Lyon',
-        prix: 150,
-        tranche_age: '10-12',
-        type: 'priere',
-        dates: '05/07/2024 - 20/07/2024'
-    }
-    // Ajouter d'autres camps si nécessaire
-];
+const url = 'https://spreadsheets.google.com/feeds/list/2PACX-1vSz_OJmn0w80FP1Ww3Uyi_YnQYd7Lcw5R06zM_jPXvlQNwG2zNf0CSu7xkhg5YxLt0QoX_4CeGeCBQh/1/public/values?alt=json';
+
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const entries = data.feed.entry;
+        const camps = entries.map(entry => ({
+            photo: entry['gsx$photo']['$t'],
+            nom: entry['gsx$nom']['$t'],
+            description: entry['gsx$description']['$t'],
+            lien_inscription: entry['gsx$lieninscription']['$t'],
+            lieu: entry['gsx$lieu']['$t'],
+            prix: parseInt(entry['gsx$prix']['$t']),
+            tranche_age: entry['gsx$trancheage']['$t'],
+            type: entry['gsx$type']['$t'],
+            dates: entry['gsx$dates']['$t']
+        }));
+        displayCamps(camps);
+    })
+    .catch(error => console.error('Erreur:', error));
 
 function displayCamps(campsToDisplay) {
     const container = document.getElementById('camps-container');
@@ -62,4 +56,4 @@ function filterCamps() {
 }
 
 // Afficher tous les camps par défaut
-displayCamps(camps);
+let camps = [];
