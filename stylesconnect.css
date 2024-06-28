@@ -4,11 +4,14 @@ body {
     color: #000000;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 100vh; /* Pleine hauteur de la fenêtre */
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    max-width: 400px; /* Largeur maximale du formulaire */
     padding: 20px;
     background-color: #f0f0f0;
     border-radius: 10px;
