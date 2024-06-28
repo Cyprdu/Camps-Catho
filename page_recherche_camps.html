@@ -17,15 +17,37 @@
         <label for="age">Âge:</label>
         <input type="text" id="age" name="age">
 
-        <label for="price">Prix:</label>
-        <input type="range" id="price" name="price" min="0" max="1000" oninput="this.nextElementSibling.value = this.value">
+        <label for="price">Prix maximum:</label>
+        <input type="range" id="price" name="price" min="0" max="1000" value="500" oninput="this.nextElementSibling.value = this.value">
         <output>500</output>€
 
         <label for="type">Type:</label>
         <select id="type" name="type">
+            <option value="">Tous</option>
             <option value="sport">Sport</option>
             <option value="priere">Prière</option>
             <option value="pelerinage">Pèlerinage</option>
+            <option value="autre">Autre</option>
         </select>
 
-       
+        <button onclick="filterCamps()">Filtrer</button>
+    </div>
+    <div class="camps-container" id="camps-container">
+        <!-- Les informations des camps seront insérées ici manuellement -->
+        <div class="camp-card">
+            <img src="https://www.pele-vtt.fr/assets/img/logo_v2.png" alt="Pélé VTT (01)">
+            <h3>Pélé VTT (01)</h3>
+            <p>Âge: Collégiens, Lycéens, Animateurs, Bénévoles</p>
+            <p>Dates: du 1 juillet 2024 au 5 juillet 2024</p>
+            <p>Chers amis,<br>
+            Nous voilà à quelques mois de notre rendez-vous annuel du Pélé VTT... <a href="camp_pele_vtt_01.html">Voir plus</a></p>
+        </div>
+    </div>
+
+    <script>
+        function filterCamps() {
+            // Filtrage à ajouter plus tard
+        }
+    </script>
+</body>
+</html>
