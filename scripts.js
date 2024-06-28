@@ -5,12 +5,12 @@ fetch(url)
     .then(data => {
         const entries = data.feed.entry;
         const camps = entries.map(entry => ({
-            photo: entry['gsx$photo']['$t'],
-            nom: entry['gsx$nom']['$t'],
+            Logo: entry['gsx$photo']['$t'],
+            Nom du camp ?: entry['gsx$nom']['$t'],
             description: entry['gsx$description']['$t'],
-            lien_inscription: entry['gsx$lieninscription']['$t'],
+            Feuille d'inscription en pdf: entry['gsx$lieninscription']['$t'],
             lieu: entry['gsx$lieu']['$t'],
-            prix: parseInt(entry['gsx$prix']['$t']),
+            Prix ?: parseInt(entry['gsx$prix']['$t']),
             tranche_age: entry['gsx$trancheage']['$t'],
             type: entry['gsx$type']['$t'],
             dates: entry['gsx$dates']['$t']
