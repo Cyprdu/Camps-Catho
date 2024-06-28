@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Camps Catholiques</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur le site des Camps Catholiques</h1>
+    </header>
+    <div class="filter-container">
+        <label for="location">Lieu:</label>
+        <input type="text" id="location" name="location">
+
+        <label for="age">Âge:</label>
+        <input type="text" id="age" name="age">
+
+        <label for="price">Prix:</label>
+        <input type="text" id="price" name="price">
+
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="sportif">Sportif</option>
+            <option value="meditation">Méditation</option>
+            <!-- Ajoutez d'autres types si nécessaire -->
+        </select>
+
+        <button onclick="filterCamps()">Filtrer</button>
+    </div>
+    <div class="camps-container" id="camps-container">
+        <!-- Les informations des camps seront insérées ici -->
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
