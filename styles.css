@@ -13,43 +13,23 @@ header {
     text-align: center;
 }
 
-.login-container, .filter-container, .form-container {
+.filter-container, .camp-details-container {
     margin: 50px auto;
     padding: 20px;
     background-color: #f0f0f0;
     border-radius: 10px;
-    max-width: 500px;
+    max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-container h1, .filter-container label, .form-container p {
-    text-align: center;
-}
-
-.login-container button, .form-container button {
+.filter-container label, .camp-details-container p {
     display: block;
-    width: 100%;
-    padding: 10px;
     margin: 10px 0;
-    background-color: #000000;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-container button:hover, .form-container button:hover {
-    background-color: #333333;
-}
-
-.filter-container label {
-    display: block;
-    margin: 10px 0 5px;
 }
 
 .filter-container input, .filter-container select, .filter-container button, .filter-container output {
     display: block;
-    width: 100%;
+    width: calc(100% - 22px);
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -57,7 +37,7 @@ header {
 }
 
 .filter-container input[type="range"] {
-    width: calc(100% - 20px);
+    width: calc(100% - 22px);
 }
 
 .camps-container {
@@ -92,9 +72,4 @@ header {
     color: white;
     border-radius: 5px;
     text-decoration: none;
-    margin-top: 10px;
-}
-
-.camp-card a:hover {
-    background-color: #333333;
-}
+    margin-top: 
