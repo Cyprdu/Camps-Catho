@@ -13,6 +13,20 @@ header {
     text-align: center;
 }
 
+button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #444444;
+}
+
 .filter-container, .camp-details-container {
     margin: 50px auto;
     padding: 20px;
@@ -72,4 +86,9 @@ header {
     color: white;
     border-radius: 5px;
     text-decoration: none;
-    margin-top: 
+    margin-top: 10px;
+}
+
+.camp-card a:hover {
+    background-color: #444444;
+}
