@@ -18,13 +18,14 @@
         <input type="text" id="age" name="age">
 
         <label for="price">Prix:</label>
-        <input type="text" id="price" name="price">
+        <input type="range" id="price" name="price" min="0" max="1000" oninput="this.nextElementSibling.value = this.value">
+        <output>500</output>€
 
         <label for="type">Type:</label>
         <select id="type" name="type">
-            <option value="sportif">Sportif</option>
-            <option value="meditation">Méditation</option>
-            <!-- Ajoutez d'autres types si nécessaire -->
+            <option value="sport">Sport</option>
+            <option value="priere">Prière</option>
+            <option value="pelerinage">Pèlerinage</option>
         </select>
 
         <button onclick="filterCamps()">Filtrer</button>
